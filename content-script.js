@@ -9,11 +9,10 @@ window.onload=function() {
 
 function clickLogin() {
 	var foundElements = $(".btn-primary");
-	if (foundElements == null || foundElements.length < 1) {
+	if (foundElements.length != 1) {
 		console.log("Find elements error: " + foundElements.outerHTML);
 		return;
 	}
-	console.log("Found elements number: " + foundElements.length);
 	var firstElement = foundElements[0];
 	console.log("First element is:\n" + firstElement.outerHTML);
 	if (firstElement.value != "Log in") {
@@ -24,7 +23,7 @@ function clickLogin() {
 	var usernameInput = $("#login_username");
 	var passInput = $("#login_password");
 	var tryIn = 0;
-	if (usernameInput == null || passInput == null) {
+	if (usernameInput.length != 1 || passInput.length != 1) {
 		tryIn = 1000;
 		console.log("Username or password input not found, will try login in " + tryIn + " ms.");
 	}
@@ -45,7 +44,7 @@ function tryClick(loginBtt, userInput, passInput) {
 		}
 	}
 	console.log("Clicking!");
-	loginBtt.click();
+	//loginBtt.click();
 	loginBtt.style.background = "green";
 	loginBtt.style.color = "white";
 }

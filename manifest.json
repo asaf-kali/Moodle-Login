@@ -1,5 +1,5 @@
  {
-    "name": "Moodler",
+    "name": "Quiclick",
     "version": "1.0",
     "description": "Moodle automatic login clicker.",
 	"permissions": ["storage", "declarativeContent"],
