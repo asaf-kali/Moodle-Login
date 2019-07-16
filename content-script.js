@@ -44,7 +44,7 @@ function tryClick(loginBtt, userInput, passInput) {
 		}
 	}
 	console.log("Clicking!");
-	//loginBtt.click();
+	loginBtt.click();
 	loginBtt.style.background = "green";
 	loginBtt.style.color = "white";
 }
